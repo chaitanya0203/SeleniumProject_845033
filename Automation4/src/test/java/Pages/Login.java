@@ -15,15 +15,18 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
-public class Logout {
+import Excelutility.Excel_data;
+
+public class Login {
 	WebDriver driver; // All the locators are declared here
 	By MyAccount = By.xpath("//*[@id=\"menu-item-50\"]/a");
 	By UserEmail = By.id("username");
 	By Password = By.id("password");
 	By Login = By.name("login");
 	By Logout = By.xpath("//*[@id=\"page-36\"]/div/div[1]/nav/ul/li[6]/a");
+	Excel_data ed = new Excel_data(driver);
 
-	public Logout(WebDriver driver) { // Constructor to make use of the methods from stepdefinition
+	public Login(WebDriver driver) { // Constructor to make use of the methods from stepdefinition
 		this.driver = driver;
 	}
 
@@ -56,10 +59,10 @@ public class Logout {
 		driver.findElement(MyAccount).click();
 	}
 
-	public void logindetails() { // Method to login into the account
+	public void logindetails(int i) throws IOException { // Method to login into the account
 
-		driver.findElement(UserEmail).sendKeys("koradabhanu@gmail.com");
-		driver.findElement(Password).sendKeys("koradabhanu");
+		driver.findElement(UserEmail).sendKeys(ed.Email(i));
+		driver.findElement(Password).sendKeys(ed.Password(i));
 	}
 
 	public void login() { // Method to click on login

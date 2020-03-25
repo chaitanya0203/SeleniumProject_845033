@@ -53,19 +53,23 @@ public class RemoveFile {
 
 	}
 
-	public void filerem() throws InterruptedException { // Method to remove the uploaded file
+	public void fileup() throws InterruptedException { // Method to remove the uploaded file
 		driver.findElement(Demo).click();
 		Actions act = new Actions(driver);
 		WebElement we = driver.findElement(More);
 		WebElement we1 = driver.findElement(fileup);
 		act.moveToElement(we);
 		act.moveToElement(we1).click().build().perform();
-		driver.findElement(Browse).sendKeys("UploadFiles//Automation3.xlsx");
+		driver.findElement(Browse).sendKeys("C:\\Users\\SUJATHA\\git\\SeleniumProject_845033\\Automation4\\UploadFiles\\Automation3.xlsx");
 		Thread.sleep(3000);
+		
+	}
+
+	public void filerem() throws InterruptedException
+	{
 		driver.findElement(Remove).click();
 		Thread.sleep(5000);
 	}
-
 	public void screenshot(String path) throws IOException { // Method to take the screenshot
 		TakesScreenshot ts = ((TakesScreenshot) driver);
 		File source = ts.getScreenshotAs(OutputType.FILE);

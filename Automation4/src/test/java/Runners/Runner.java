@@ -10,7 +10,7 @@ import cucumber.api.junit.Cucumber;
 		plugin = { "html:target/cucumber-html-report" }, // Extracting the reports in target folder
 		tags = { "@TC_01", "@TC_02", "@TC_03", "@TC_04", "@TC_05" }, // Giving the tags of the scenarios to run
 		glue = { "StepDefinition" }, // To store the methods generated from feature file
-		monochrome = true // Output for the Cucumber test are readable
+		monochrome = true // Console for the Cucumber test are readable
 )
 public class Runner {
 

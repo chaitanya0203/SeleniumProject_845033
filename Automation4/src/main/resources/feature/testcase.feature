@@ -1,11 +1,11 @@
 Feature: Practice_Automation3
 
   @TC_01
-  Scenario: Demosite registration-Alerts
-    Given Opens url in the browser
-    When automation site is opens
-    Then Click on SwitchTo and alerts
-    Then get the alert text
+  Scenario: Demosite registration-Login
+    Given open the url
+    When url is launched login to the application
+    When enters the email and password and click on login
+    Then click on logout
 
   @TC_02
   Scenario: Demosite registration-Remove file
@@ -30,8 +30,8 @@ Feature: Practice_Automation3
     Then tap on escape key and quit
 
   @TC_05
-  Scenario: Demosite registration-Logout
-    Given open the url
-    When url is launched login to the application
-    When enters the email and password and click on login
-    Then click on logout
+  Scenario: Demosite registration-Alerts
+    Given Opens url in the browser
+    When automation site is opens
+    Then Click on SwitchTo and alerts
+    Then get the alert text

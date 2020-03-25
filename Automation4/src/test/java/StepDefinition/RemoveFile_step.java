@@ -20,13 +20,16 @@ public class RemoveFile_step {
 	}
 
 	@When("^the more is mouse overed and click on the File Upload$")
-	public void the_more_is_mouse_overed_and_click_on_the_File_Upload() throws InterruptedException {
-		rf.filerem(); // Calling the filerem method
+	public void the_more_is_mouse_overed_and_click_on_the_File_Upload() throws InterruptedException, IOException {
+		rf.fileup();
+		rf.screenshot("Screenshots//afteruploading.png");
+		
 	}
 
 	@When("^File is Selected$")
-	public void file_is_Selected() throws IOException {
-		rf.screenshot("Screenshots//remove.png"); // Calling the screenshot method
+	public void file_is_Selected() throws IOException, InterruptedException {
+		rf.filerem(); // Calling the filerem method
+		rf.screenshot("Screenshots//afterremoving.png"); // Calling the screenshot method
 	}
 
 	@Then("^remove the uploaded file$")

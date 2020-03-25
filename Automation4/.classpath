@@ -124,5 +124,6 @@
 	<classpathentry kind="lib" path="D:/Selenium_jar_files/library_files/libs/okhttp-3.11.0.jar"/>
 	<classpathentry kind="lib" path="D:/Selenium_jar_files/library_files/libs/okio-1.14.0.jar"/>
 	<classpathentry kind="src" path="/Automation3"/>
+	<classpathentry kind="lib" path="D:/Selenium_jar_files/junit_3.8.1/junit-3.8.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
